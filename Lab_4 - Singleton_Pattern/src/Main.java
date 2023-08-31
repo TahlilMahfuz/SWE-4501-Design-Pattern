@@ -1,17 +1,14 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        StudentInfo studentInfo=new StudentInfo("Tahlil", "200042158","CSE","SWE");
+        StudentInfo studentInfo1=new StudentInfo("Mahfuz", "200042159","CEE","CEE");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Database studentDB=Database.getDatabaseInstance();
+        studentDB.addStudent(studentInfo);
+//        studentDB.showData();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        Database studentDB1=Database.getDatabaseInstance();
+        studentDB1.addStudent(studentInfo1);
+        studentDB1.showData();
     }
 }
