@@ -25,20 +25,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "S:/SWE_STUDIES/Github Projects/SWE-4501-Design-Pattern/Lab_4 - Singleton_Pattern",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "S:/SWE_STUDIES/Github Projects/SWE-4501-Design-Pattern/Lab_4 - Singleton_Pattern/src/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;S:/SWE_STUDIES/Github Projects/SWE-4501-Design-Pattern/Lab_4 - Singleton_Pattern&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;S:/SWE_STUDIES/Github Projects/SWE-4501-Design-Pattern/Lab_4 - Singleton_Pattern/src/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -62,7 +63,12 @@
       <option name="presentableId" value="Default" />
       <updated>1693508984390</updated>
       <workItem from="1693508985426" duration="12000" />
-      <workItem from="1693512500121" duration="1977000" />
+      <workItem from="1693512500121" duration="2276000" />
+      <workItem from="1693517666325" duration="31000" />
+      <workItem from="1693557357441" duration="180000" />
+      <workItem from="1693558197307" duration="129000" />
+      <workItem from="1694075194496" duration="460000" />
+      <workItem from="1694082078573" duration="26000" />
     </task>
     <servers />
   </component>

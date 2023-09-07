@@ -5,10 +5,10 @@ public class Main {
 
         Database studentDB=Database.getDatabaseInstance();
         studentDB.addStudent(studentInfo);
-//        studentDB.showData();
-
-        Database studentDB1=Database.getDatabaseInstance();
-        studentDB1.addStudent(studentInfo1);
-        studentDB1.showData();
+        studentDB.showData();
+//
+//        Database studentDB1=Database.getDatabaseInstance();
+//        studentDB1.addStudent(studentInfo1);
+//        studentDB1.showData();
     }
 }
