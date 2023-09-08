@@ -1,9 +1,9 @@
 class PepperoniPizza extends Pizza {
-    private PizzaIngredientFactory ingredientFactory;
+    private final PizzaIngredientFactory ingredientFactory;
 
     public PepperoniPizza(PizzaIngredientFactory ingredientFactory) {
         this.ingredientFactory = ingredientFactory;
-        this.name = "Pepperoni Pizza"; // Set the name here
+        this.name = "Pepperoni Pizza";
     }
 
     void prepare() {

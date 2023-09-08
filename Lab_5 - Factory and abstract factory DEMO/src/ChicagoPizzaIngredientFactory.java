@@ -1,0 +1,3 @@
+class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
+
+}
