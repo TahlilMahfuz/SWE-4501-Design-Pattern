@@ -1,4 +1,4 @@
-class Milk extends CondimentDecorator {
+class Milk extends CoffeeDecorator {
     public Milk(Coffee coffee) {
         super(coffee);
     }

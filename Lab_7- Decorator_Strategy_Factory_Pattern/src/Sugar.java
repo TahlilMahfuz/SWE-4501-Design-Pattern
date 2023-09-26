@@ -1,4 +1,4 @@
-class Sugar extends CondimentDecorator {
+class Sugar extends CoffeeDecorator {
     public Sugar(Coffee coffee) {
         super(coffee);
     }

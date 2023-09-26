@@ -1,0 +1,3 @@
+interface IPaymentMethod {
+    void pay();
+}
