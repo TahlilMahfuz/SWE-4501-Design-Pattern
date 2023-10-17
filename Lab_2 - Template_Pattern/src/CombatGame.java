@@ -1,6 +1,7 @@
 abstract class CombatGame{
     Icharacter myCharacter,opponent;
     // Template method
+    //Need to be declared as "Final"
     protected final void startGame(Icharacter myCharacter,Icharacter opponent) {
         initialize();
         chooseCharacter(myCharacter);

@@ -11,7 +11,7 @@ public class CoffeeShop {
         Coffee cappuccino = new Vanilla(coffeeFactory.createCoffee("Cappuccino")); // Customize with Vanilla
         System.out.println("Order: " + cappuccino.getDescription() + ", Cost: $" + cappuccino.cost());
 
-        PaymentGateway paymentGateway=new PaymentGateway(new DebitCard());
+        PaymentGateway paymentGateway=new PaymentGateway(new CreditCard());
         paymentGateway.pay();
     }
 }
