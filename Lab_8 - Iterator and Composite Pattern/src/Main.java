@@ -3,30 +3,37 @@ public class Main {
         System.out.println("Creating a village");
 
         // Components
-        Rectangle brickHouse = new Rectangle();
-        Rectangle mudHouse = new Rectangle();
-        Triangle brickHouseCeiling = new Triangle();
-        Triangle mudHouseCeiling = new Triangle();
-        Curve swimmingPool = new Curve();
-        Curve pond = new Curve();
-        Leaf mangoTree = new Leaf();
-        Leaf bananaTree = new Leaf();
+        Rectangle brickHouse = new Rectangle(2,3,"Brick");
+        Triangle brickHouseCeiling = new Triangle(10,20,30,"Brick");
+        Curve swimmingPool = new Curve(10,"Swimming Pool");
+        Leaf mangoTree = new Leaf("Green","Mango");
 
-        // Villages with specific combinations
-        Village brickHouseVillage = new Village("Brick House Village");
-        brickHouseVillage.addShape(brickHouse);
-        brickHouseVillage.addShape(brickHouseCeiling);
-        brickHouseVillage.addShape(mangoTree);
-        brickHouseVillage.addShape(swimmingPool);
+        // Create a village using the Builder pattern
+        VillageBuilder villageBuilder = new VillageBuilder("Brick House Village")
+                .addShape(brickHouse)
+                .addShape(brickHouseCeiling)
+                .addShape(swimmingPool)
+                .addShape(mangoTree);
 
-        Village mudHouseVillage = new Village("Mud House Village");
-        mudHouseVillage.addShape(mudHouse);
-        mudHouseVillage.addShape(mudHouseCeiling);
-        mudHouseVillage.addShape(bananaTree);
-        mudHouseVillage.addShape(pond);
+        Village brickHouseVillage = villageBuilder.build();
+
+        // Components
+        Rectangle mudHouse = new Rectangle(10,16,"Mud");
+        Triangle mudHouseCeiling = new Triangle(2 ,4,6,"Mud");
+        Curve pond = new Curve(20,"Pond");
+        Leaf bananaTree = new Leaf("Yellow","Banana");
+
+        // Create a village using the Builder pattern
+        VillageBuilder villageBuilder2 = new VillageBuilder("Mud house Village")
+                .addShape(mudHouse)
+                .addShape(mudHouseCeiling)
+                .addShape(pond)
+                .addShape(bananaTree);
+
+        Village mudHouseVillage = villageBuilder2.build();
 
         // Display the components in each village
-        brickHouseVillage.displayComponents();
-        mudHouseVillage.displayComponents();
+        mudHouseVillage.DrawShapes();
+        brickHouseVillage.DrawShapes();
     }
 }

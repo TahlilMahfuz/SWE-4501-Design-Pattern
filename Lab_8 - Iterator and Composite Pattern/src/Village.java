@@ -1,27 +1,34 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
-class Village {
+// Composite class
+class Village implements ShapeToDraw, Iterable<ShapeToDraw> {
     public String name;
-    public ArrayList<ShapeToDraw> shapesList = new ArrayList<ShapeToDraw>();
+    public List<ShapeToDraw> shapes = new ArrayList<>();
 
     public Village(String name) {
         this.name = name;
-        System.out.println(this.name + " Created!\n");
     }
 
     public void addShape(ShapeToDraw shape) {
-        this.shapesList.add(shape);
+        shapes.add(shape);
     }
 
-    public void displayComponents() {
-        System.out.println("Components of " + this.name + ":");
-        //Iterator Pattern
-        Iterator iterator = this.shapesList.iterator();
-        while (iterator.hasNext()) {
-            ShapeToDraw shape = (ShapeToDraw)iterator.next();
+    public void removeShape(ShapeToDraw shape) {
+        shapes.remove(shape);
+    }
+
+    @Override
+    public void DrawShapes() {
+        System.out.println("Village: " + name);
+        for (ShapeToDraw shape : shapes) {
             shape.DrawShapes();
         }
-        System.out.println('\n');
+    }
+
+    @Override
+    public Iterator<ShapeToDraw> iterator() {
+        return shapes.iterator();
     }
 }

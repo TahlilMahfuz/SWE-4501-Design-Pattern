@@ -1,7 +1,12 @@
 public class Curve implements ShapeToDraw{
-    public int ca,cb,cc;
+    public int area;
+    public String type;
+    public Curve(int area,String type){
+        this.area=area;
+        this.type=type;
+    }
     @Override
     public void DrawShapes() {
-        System.out.println("Curve Drawn");
+        System.out.println("Area: "+area+"\nType: "+type+"\nCurve Drawn\n");
     }
 }
