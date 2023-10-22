@@ -1,0 +1,3 @@
+interface ShapeToDraw {
+    void DrawShapes();
+}
