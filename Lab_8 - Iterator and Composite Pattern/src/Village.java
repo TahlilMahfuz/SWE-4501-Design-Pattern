@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Village {
     public String name;
     public ArrayList<ShapeToDraw> shapesList = new ArrayList<ShapeToDraw>();
