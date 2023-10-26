@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Creating a village");
+        System.out.println("Creating a village\n");
 
         // Components
         Rectangle brickHouse = new Rectangle(2,3,"Brick");
@@ -9,7 +9,7 @@ public class Main {
         Leaf mangoTree = new Leaf("Green","Mango");
 
         // Create a village using the Builder pattern
-        VillageBuilder villageBuilder = new VillageBuilder("Brick House Village")
+        VillageBuilder villageBuilder = new VillageBuilder("Brick House Village Banana Tree and Pond")
                 .addShape(brickHouse)
                 .addShape(brickHouseCeiling)
                 .addShape(swimmingPool)
@@ -24,7 +24,7 @@ public class Main {
         Leaf bananaTree = new Leaf("Yellow","Banana");
 
         // Create a village using the Builder pattern
-        VillageBuilder villageBuilder2 = new VillageBuilder("Mud house Village")
+        VillageBuilder villageBuilder2 = new VillageBuilder("Mud house Village with Manago Tree and Swimming Pool")
                 .addShape(mudHouse)
                 .addShape(mudHouseCeiling)
                 .addShape(pond)

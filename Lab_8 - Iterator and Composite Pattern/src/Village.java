@@ -22,9 +22,11 @@ class Village implements ShapeToDraw, Iterable<ShapeToDraw> {
     @Override
     public void DrawShapes() {
         System.out.println("Village: " + name);
-        for (ShapeToDraw shape : shapes) {
-            shape.DrawShapes();
+        Iterator<ShapeToDraw> itr=shapes.iterator();
+        while(itr.hasNext()){
+            itr.next().DrawShapes();
         }
+        System.out.println(this.name+" drawn\n__________________________\n");
     }
 
     @Override
