@@ -1,11 +1,11 @@
 abstract class Car {
-    private String name;
+    private final String name;
     private Engine engine;
     private TurboCharger turboCharger;
     public Car(String name,Engine engine,TurboCharger turboCharger){
         this.name=name;
-        this.engine=engine;
-        this.turboCharger=turboCharger;
+        this.setEngine(engine);
+        this.setTurboCharger(turboCharger);
     }
     public void setEngine(Engine engine){
         this.engine=engine;
