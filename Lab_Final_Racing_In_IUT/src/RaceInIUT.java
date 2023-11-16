@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class RaceInIUT {
+    public static Race createRace(Car car, Track track){
+        return new Race(car, track);
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //create player
@@ -14,7 +17,7 @@ public class RaceInIUT {
         //Create Car
         System.out.println("Choose a car: (1.Coupe 2.RoadStar)\n");
         int carCategory = scanner.nextInt();
-        CarAbstractFactory carFactory =carCategory == 1 ? CarFactoryProducer.getFactory("COUPE") : CarFactoryProducer.getFactory("ROADSTAR");
+        CarAbstractFactory carFactory =carCategory == 1 ? CarFactoryProducer.getFactory("COUPE") : CarFactoryProducer.getFactory("ROADSTER");
         assert carFactory != null;
         int carType;
         if(carCategory == 1) {
@@ -27,7 +30,7 @@ public class RaceInIUT {
         }
         System.out.println("Choose an engine: (1.V6 2.V8 3.V12)\n");
         int engineCategory = scanner.nextInt();
-        System.out.println("Choose a turbo charger: (1.Honeywell 2.Sema 3.BorgWarner)\n");
+        System.out.println("Choose a turbo charger: (1.Honeywell 2.Sema 3.Alpine)\n");
         int turboChargerCategory = scanner.nextInt();
         //create a map of engines and turboChargers
         Engine engine = null;
@@ -49,6 +52,7 @@ public class RaceInIUT {
         switch (turboChargerCategory) {
             case 1 -> turboCharger = new Honeywell();
             case 2 -> turboCharger = new Cummins();
+            case 3 -> turboCharger = new Alpine();
             default -> throw new IllegalStateException("Unexpected value: " + turboChargerCategory);
         }
         Car car = carFactory.getCar(carName, engine, turboCharger);
@@ -79,6 +83,8 @@ public class RaceInIUT {
         track.showTrackInfo();
 
 
-
+        //Create a race
+        Race race = createRace(car, track);
+        race.startRace();
     }
 }
