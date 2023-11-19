@@ -4,9 +4,9 @@ public class Main {
         EditingState overwriteMode = new OverwriteMode();
 
         DocumentEditor editor = new DocumentEditor(insertMode);
-        editor.type("Hello"); // Output: Insert Mode: Hello
+        editor.type("Hello");
 
         editor.switchMode(overwriteMode);
-        editor.type("World"); // Output: Overwrite Mode: World
+        editor.type("World");
     }
 }

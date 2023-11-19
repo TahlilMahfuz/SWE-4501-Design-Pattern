@@ -30,12 +30,6 @@ public abstract class Car {
     public void setNOS(NOS nos){
         this.nos=nos;
     }
-    //template Pattern
-    public void startRace(){
-        start();
-        accelerate();
-        stop();
-    }
     public void showCarInfo() {
         System.out.println("Car name: " + this.getClass().getSimpleName());
         engine.showEngineInfo();
@@ -43,7 +37,6 @@ public abstract class Car {
         if(this.nos!=null)
             nos.showNOSInfo();
     }
-    //Hook method
     public void start(){
         System.out.println("Car is starting...");
     }

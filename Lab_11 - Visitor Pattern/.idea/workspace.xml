@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a5547c2-a93f-4d57-b3da-ad3fb2deb91b" name="Changes" comment="Uploaded Visitor Pattern" />
+    <list default="true" id="8a5547c2-a93f-4d57-b3da-ad3fb2deb91b" name="Changes" comment="Uploaded Visitor Pattern">
+      <change beforePath="$PROJECT_DIR$/../Lab_10  - State Pattern/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab_10  - State Pattern/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +37,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -52,6 +56,8 @@
       <updated>1700197494615</updated>
       <workItem from="1700197495639" duration="5000" />
       <workItem from="1700197541197" duration="215000" />
+      <workItem from="1700198313695" duration="233000" />
+      <workItem from="1700403832011" duration="64000" />
     </task>
     <task id="LOCAL-00001" summary="Uploaded Visitor Pattern">
       <option name="closed" value="true" />
