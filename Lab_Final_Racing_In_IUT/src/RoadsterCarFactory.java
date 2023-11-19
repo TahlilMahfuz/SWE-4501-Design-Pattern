@@ -5,7 +5,7 @@ public class RoadsterCarFactory extends CarAbstractFactory{
         if(carName.equalsIgnoreCase("FERRARI")){
             return new Ferrari(engine, turboCharger);
         }
-        else if(carName.equalsIgnoreCase("PORSCHE")){
+        else if(carName.equalsIgnoreCase("PORSHE")){
             return new Porsche(engine, turboCharger);
         }
         return null;

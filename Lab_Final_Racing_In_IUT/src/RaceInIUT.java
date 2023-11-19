@@ -4,6 +4,13 @@ public class RaceInIUT {
     public static Race createRace(Car car, Track track){
         return new Race(car, track);
     }
+    public static Engine getv6Engine(){return new V6Engine();}
+    public static Engine getv8Engine(){return new V8Engine();}
+    public static Engine getv12Engine(){return new V12Engine();}
+    public static TurboCharger getHoneywellTurboCharger(){return new Honeywell();}
+    public static TurboCharger getCumminsTurboCharger(){return new Cummins();}
+    public static TurboCharger getAlpineTurboCharger(){return new Alpine();}
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -55,17 +62,17 @@ public class RaceInIUT {
             System.out.println("Choose an engine: (1.V6 2.V8 3.V12)\n");
             int engineCategory = scanner.nextInt();
             switch (engineCategory) {
-                case 1 -> engine = new V6Engine();
-                case 2 -> engine = new V8Engine();
-                case 3 -> engine = new V12Engine();
+                case 1 -> engine = getv6Engine();
+                case 2 -> engine = getv8Engine();
+                case 3 -> engine = getv12Engine();
                 default -> throw new IllegalStateException("Unexpected value: " + engineCategory);
             }
             System.out.println("Choose a turbo charger: (1.Honeywell 2.Sema 3.Alpine)\n");
             int turboChargerCategory = scanner.nextInt();
             switch (turboChargerCategory) {
-                case 1 -> turboCharger = new Honeywell();
-                case 2 -> turboCharger = new Cummins();
-                case 3 -> turboCharger = new Alpine();
+                case 1 -> turboCharger = getHoneywellTurboCharger();
+                case 2 -> turboCharger = getCumminsTurboCharger();
+                case 3 -> turboCharger = getAlpineTurboCharger();
                 default -> throw new IllegalStateException("Unexpected value: " + turboChargerCategory);
             }
             Car car = carFactory.getCar(carName, engine, turboCharger);
@@ -101,6 +108,8 @@ public class RaceInIUT {
             race.startRace();
         }
         catch (Exception e){
+            //print exception
+            System.out.println(e);
             System.out.println("Your input was wrong!Let's try again.");
             main(args);
         }
