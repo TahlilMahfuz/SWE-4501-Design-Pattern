@@ -2,28 +2,21 @@ import java.text.SimpleDateFormat;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Race {
-    private final Car car;
-    private final Track track;
+public abstract class Race {
+    protected final Car car;
+    protected final Track track;
     public Race(Car car, Track track) {
         this.car=car;
         this.track=track;
     }
-    public final void showRaceInfo() {
-        System.out.println("\n\n");
-        car.showCarInfo();
-        track.showTrackInfo();
-    }
+    protected abstract void showRaceInfo();
+    protected abstract void showRaceType();
+    protected abstract void startLine(Track track);
+    protected abstract void finishLine(Track track);
     //Hook Method
     //Private methods are implicitly final in java
     private void startCar(Car car){
         car.start();
-    }
-    private void startLine(Track track){
-        track.startLine();
-    }
-    private void finishLine(Track track){
-        track.finishingLine();
     }
     private void accelerateCar(Car car){
         car.accelerate();

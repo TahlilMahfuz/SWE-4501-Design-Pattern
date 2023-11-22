@@ -1,8 +1,16 @@
 import java.util.Scanner;
 
 public class RaceInIUT {
-    public static Race createRace(Car car, Track track){
-        return new Race(car, track);
+    public static Race createRace(Car car, Track track, String raceType){
+        if(raceType.equalsIgnoreCase("Sprint")){
+            return new SprintRace(car, track);
+        }
+        else if(raceType.equalsIgnoreCase("Circuit")){
+            return new CircuitRace(car, track);
+        }
+        else{
+            return null;
+        }
     }
     public static Engine getv6Engine(){return new V6Engine();}
     public static Engine getv8Engine(){return new V8Engine();}
@@ -57,8 +65,8 @@ public class RaceInIUT {
 
 
             //create a map of engines and turboChargers
-            Engine engine = null;
-            TurboCharger turboCharger = null;
+            Engine engine;
+            TurboCharger turboCharger;
             System.out.println("Choose an engine: (1.V6 2.V8 3.V12)\n");
             int engineCategory = scanner.nextInt();
             switch (engineCategory) {
@@ -85,17 +93,21 @@ public class RaceInIUT {
             System.out.println("Choose a track: (1.Sprint 2.Circuit)\n");
             int trackCategory = scanner.nextInt();
             String trackName;
+            String raceType;
             if(trackCategory==1){
+                raceType="Sprint";
                 System.out.println("Choose a sprint track: (1.BBRacewayJapan 2.BlueMoonBaySpeedwayUSA)\n");
                 int sprintTrackCategory = scanner.nextInt();
                 if(sprintTrackCategory==1){
                     trackName = "BBRacewayJapan";
                 }
                 else{
+
                     trackName = "BlueMoonBaySpeedwayUSA";
                 }
             }
             else{
+                raceType="Circuit";
                 System.out.println("Choose a circuit track: (1.CircuitDeSpaFrancorchampsGermany)\n");
                 trackName = "CircuitDeSpaFrancorchampsGermany";
             }
@@ -103,8 +115,10 @@ public class RaceInIUT {
             track.showTrackInfo();
 
 
-            //Create a race
-            Race race = createRace(car, track);
+            //Create a
+            System.out.println(raceType);
+            Race race = createRace(car, track, raceType);
+            assert race != null;
             race.startRace();
 
             System.out.println("\n\nCongratulations! "+player.name+"\nYou have finished the race");
