@@ -115,7 +115,7 @@ public class RaceInIUT {
             track.showTrackInfo();
 
 
-            //Create a
+            //Create race
             System.out.println(raceType);
             Race race = createRace(car, track, raceType);
             assert race != null;
