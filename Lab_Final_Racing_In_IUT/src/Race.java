@@ -51,11 +51,10 @@ public class Race {
                 System.out.println("Invalid Choice");
                 break;
         }
-        applyNOS(car,nos);
         assert nos != null;
         System.out.println("Applying NOS : "+nos.getClass().getSimpleName());
-        car.setNOS(nos);
-        System.out.println("NOS is applied successfully");
+        applyNOS(car,nos);
+        System.out.println("NOS is applied successfully.Exiting Pit Stop...................");
         accelerateCar(car);
     }
     private void lapTime(){
@@ -72,7 +71,7 @@ public class Race {
         startLine(this.track);
         accelerateCar(this.car);
         Scanner sc=new Scanner(System.in);
-        System.out.println("Do you want to apply NOS? (Y/N)");
+        System.out.println("Do you want to pitstop to apply NOS? (Y/N)");
         String choice=sc.next();
         if(choice.equalsIgnoreCase("Y")){
             pitStop(car);
