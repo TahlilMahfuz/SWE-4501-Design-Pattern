@@ -10,6 +10,7 @@ public class Race {
         this.track=track;
     }
     public final void showRaceInfo() {
+        System.out.println("\n\n");
         car.showCarInfo();
         track.showTrackInfo();
     }

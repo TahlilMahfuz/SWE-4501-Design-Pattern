@@ -67,7 +67,7 @@ public class RaceInIUT {
                 case 3 -> engine = getv12Engine();
                 default -> throw new IllegalStateException("Unexpected value: " + engineCategory);
             }
-            System.out.println("Choose a turbo charger: (1.Honeywell 2.Sema 3.Alpine)\n");
+            System.out.println("Choose a turbo charger: (1.Honeywell 2.Cummins 3.Alpine)\n");
             int turboChargerCategory = scanner.nextInt();
             switch (turboChargerCategory) {
                 case 1 -> turboCharger = getHoneywellTurboCharger();
