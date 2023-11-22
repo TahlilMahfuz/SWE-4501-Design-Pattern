@@ -1,3 +1,4 @@
+//Singleton class for player
 public class Player {
     String name;
     private static final Player player= new Player();

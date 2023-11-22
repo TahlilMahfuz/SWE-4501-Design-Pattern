@@ -77,7 +77,6 @@ public class Race {
             pitStop(car);
         }
         showRaceInfo();
-        finishLine(this.track);
         stopCar(this.car);
         lapTime();
     }
