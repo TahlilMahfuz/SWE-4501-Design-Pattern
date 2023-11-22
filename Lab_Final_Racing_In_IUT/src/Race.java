@@ -28,7 +28,7 @@ public class Race {
         car.accelerate();
     }
     private void applyNOS(Car car,NOS nos){
-        car.setNOS(nos);
+        CarDecorator nosCarDecorator = new NOSCarDecorator(car,nos);
     }
     private void stopCar(Car car){
         car.stop();
