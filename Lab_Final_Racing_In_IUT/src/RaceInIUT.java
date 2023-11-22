@@ -106,6 +106,8 @@ public class RaceInIUT {
             //Create a race
             Race race = createRace(car, track);
             race.startRace();
+
+            System.out.println("\n\nCongratulations! "+player.name+"\nYou have finished the race");
         }
         catch (Exception e){
             //print exception
