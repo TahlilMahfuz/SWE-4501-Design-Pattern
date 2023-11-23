@@ -22,7 +22,7 @@ public abstract class Race {
         car.accelerate();
     }
     private void applyNOS(Car car,NOS nos){
-        CarDecorator nosCarDecorator = new NOSCarDecorator(car,nos);
+        NOSCarDecorator.setNos(car,nos);
     }
     private void stopCar(Car car){
         car.stop();

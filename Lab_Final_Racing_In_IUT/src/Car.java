@@ -27,7 +27,7 @@ public abstract class Car {
     public NOS getNOS() {
         return nos;
     }
-    public void setNOS(NOS nos){
+    protected void setNOS(NOS nos){
         this.nos=nos;
     }
     public void showCarInfo() {
